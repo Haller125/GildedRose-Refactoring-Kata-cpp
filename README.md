@@ -2,7 +2,7 @@
     $ mkdir build
     $ cd build
     $ cmake ..
-    $ cmake --build .
+    $ cmake --build . --target run_GildedRoseTextTests --config Debug
 
 # Технические требования «Gilded Rose»
 

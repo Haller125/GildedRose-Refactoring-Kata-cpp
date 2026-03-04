@@ -9,6 +9,13 @@ add_test(
   WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
+add_custom_target(
+  run_${TEST_NAME}
+  COMMAND $<TARGET_FILE:${TEST_NAME}>
+  DEPENDS ${TEST_NAME}
+  WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+) 
+
 # Set compiler option /FC for Visual Studio to to make the __FILE__ macro expand to full path.
 # The __FILE__ macro is used by Catch2 to get the path to current test file.
 # Links:
