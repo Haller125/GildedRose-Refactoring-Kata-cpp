@@ -1,4 +1,5 @@
 #include "GildedRose.h"
+#include <stdexcept>
 
 using namespace std;
 
@@ -79,4 +80,21 @@ void GildedRose::updateQuality()
             }
         }
     }
+}
+
+Cashier::Cashier() : coins({1, 5, 10, 25, 50})
+{}
+
+vector<int> Cashier::calculateChange(int amountPaid, int itemPrice)
+{
+    (void)amountPaid;
+    (void)itemPrice;
+    throw logic_error("NotImplementedError");
+}
+
+vector<vector<Item>> Cashier::budgetOptions(int budget, const vector<Item> & currentItems)
+{
+    (void)budget;
+    (void)currentItems;
+    throw logic_error("NotImplementedError");
 }

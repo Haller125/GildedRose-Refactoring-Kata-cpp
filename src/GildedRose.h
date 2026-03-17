@@ -21,3 +21,14 @@ public:
     
     void updateQuality();
 };
+
+class Cashier
+{
+public:
+    std::vector<int> coins;
+
+    Cashier();
+
+    std::vector<int> calculateChange(int amountPaid, int itemPrice);
+    std::vector<std::vector<Item>> budgetOptions(int budget, const std::vector<Item> & currentItems);
+};
